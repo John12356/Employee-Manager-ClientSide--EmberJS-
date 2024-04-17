@@ -26,7 +26,6 @@ export default class Employee extends Component {
       })
       .then((data) => {
         console.log('Post saved:', data);
-        // this.emp = this.emp.filter((each) => each.emp_id !== id);
         this.sharedData.getEmployees();
         this.closeDelete();
       })
