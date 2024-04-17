@@ -1,0 +1,75 @@
+<div class="whole-container">
+  <div class="logo-div">
+    <h1 className="app-head">
+      <span id="first">Securden </span>
+      <span id="third">Employees</span>
+    </h1>
+  </div>
+  <form {{on "submit" this.save}} class="top-div">
+    <input
+      value={{this.emp_id}}
+      type="number"
+      {{on "input" this.updateId}}
+      placeholder="Enter your ID"
+    />
+    <input
+      value={{this.emp_name}}
+      type="text"
+      {{on "input" this.updateName}}
+      placeholder="Enter Name"
+    />
+    <input
+      value={{this.emp_age}}
+      type="number"
+      {{on "input" this.updateAge}}
+      placeholder="Enter Age"
+    />
+    <button type="submit">Add +</button>
+  </form>
+  <div class="body-div">
+    {{#if this.sharedData.isDeleteOpen}}
+      <Delete />
+    {{/if}}
+    {{#if this.sharedData.isEditOpen}}
+      <Editor />
+    {{/if}}
+    {{#if this.sharedData.emp}}
+      <table>
+        <thead>
+          <tr>
+            <td>Employee ID</td>
+            <td>Employee Name</td>
+            <td>Employee Age</td>
+            <td>Edit</td>
+            <td> Delete</td>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each this.sharedData.emp as |emp|}}
+            <tr>
+              <td>{{emp.emp_id}}</td>
+              <td>{{emp.emp_name}}</td>
+              <td>{{emp.emp_age}}</td>
+              <td>
+                <button
+                  {{action this.toggleEdit emp}}
+                  class="edit-bt"
+                  type="button"
+                >Edit</button>
+              </td>
+              <td>
+                <button
+                  {{action this.toggleDelete emp.emp_id}}
+                  class="del-bt"
+                  type="button"
+                >Delete</button>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{else}}
+      <h2 class="no-emp">No Employees available right now!! :(</h2>
+    {{/if}}
+  </div>
+</div>

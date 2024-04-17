@@ -1,1 +1,157 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+@import url("./editor.css");
+@import url("./delete.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+.whole-container {
+  overflow: hidden;
+  background-color: #e1f7f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo-div {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.logo-div h1 {
+  text-align: center;
+  text-shadow: 2px 4px 3px rgb(0 0 0 / 30%);
+}
+
+#first {
+  color: green;
+}
+
+#second {
+  color: rgb(245 237 237);
+}
+
+#third {
+  color: #003c43;
+}
+
+.top-div {
+  padding: 0 20px;
+  background-color: #e1f7f5;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-div input {
+  width: 25%;
+  height: 35px;
+  border: 0;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 10px;
+  outline: 0;
+  box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+}
+
+.top-div button {
+  width: 10%;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #9ac8cd;
+  box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+  cursor: pointer;
+}
+
+.top-div button:hover {
+  border-radius: 7px;
+  background-color: rgb(114 222 114);
+  color: rgb(38, 35, 35);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 35%);
+}
+
+.body-div {
+  background-color: #1e0342;
+  height: 91vh;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  overflow-y: scroll;
+}
+
+.body-div::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #cef5eb;
+}
+
+thead {
+  font-size: 17px;
+  background-color: #0e46a3;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+tr,
+th,
+td {
+  padding: 20px;
+  text-align: center;
+}
+
+tbody tr td{
+  padding: 15px;
+}
+
+td {
+  border: 1px solid #9AC8CD;
+}
+
+td button {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 10px 20px;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.edit-bt {
+  background-color: rgb(114 222 114);
+}
+
+.del-bt {
+  background-color: rgb(221 67 67);
+}
+.edit-bt:hover,
+.del-bt:hover {
+  color: rgb(38, 35, 35);
+  border-radius: 5px;
+}
+
+.no-emp {
+  margin-top: 20px;
+  text-align: center;
+  color: #cef5eb;
+}

@@ -1,0 +1,26 @@
+<div class="edit-container">
+  <div class="edit-body">
+    <h3>Editing {{this.sharedData.employee.emp_id}}</h3>
+    <input
+      value={{this.sharedData.employee.emp_name}}
+      {{on "input" this.updateName}}
+      type="text"
+      placeholder="Enter name ( 5 - 20 )"
+    />
+    <input
+      value={{this.sharedData.employee.emp_age}}
+      {{on "input" this.updateAge}}
+      type="number"
+      placeholder="Enter age ( 18 - 60 )"
+    />
+    <div class="edit-bt-container">
+      <button {{action this.submitEdit}} type="button">Edit</button>
+      <button
+        type="button"
+        {{action this.closeEditor this.isEdit}}
+      >Cancel</button>
+    </div>
+  </div>
+</div>
+
+{{yield}}

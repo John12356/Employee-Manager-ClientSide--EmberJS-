@@ -1,0 +1,15 @@
+<div class="dialog-body">
+  <div class="dialog-div">
+    <h3 class="dialog-text">Are you sure want to delete?</h3>
+    <div class="dialog-btn">
+      <button class="dialog-bt" type="button" {{action this.handleDelete}}>
+        Yes
+      </button>
+      <button  class="dialog-bt" type="button" {{action this.closeDelete}}>
+        No
+      </button>
+    </div>
+  </div>
+</div>
+
+{{yield}}
