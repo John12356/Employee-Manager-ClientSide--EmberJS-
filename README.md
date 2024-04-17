@@ -1,7 +1,7 @@
 # Employee Manager Client Side 
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+It's just a EmberJS version of  (Refer : [Employee Manager](https://github.com/John12356/Simple-Employee-Ma)) .
+You can refer this repository for further details to end to end application using ReactJS & Django.
 
 ## Prerequisites
 
